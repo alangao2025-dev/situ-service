@@ -28,11 +28,11 @@ for p in parts:
     sec.append(f'<section class="card">{p}</section>')
 tiers = f"""<div class="tiers">
 <div class="tier"><div class="tn">畅享版</div><div class="tp"><span class="num">¥999</span><small>/月</small></div>
-<div class="tr">你的<b>高级助理</b></div><p>懂你的业务和标准，一句话就明白，交出来的拿来就能用。</p>
+<div class="tr">你的<b>高级助理</b></div><p>交代一件，办妥一件，拿来就用。</p>
 <ul><li>远程客服 <span class="num">9:00–21:00</span>，<span class="num">3</span> 分钟内响应</li><li>免费试用 <span class="num">14</span> 天</li></ul>
 <div class="fine">每月 500 个工作项 · 可同时进行 3 个</div></div>
 <div class="tier hi"><span class="badge">主推</span><div class="tn">尊享版</div><div class="tp"><span class="num">¥1,999</span><small>/月</small></div>
-<div class="tr">你的<b>特别助理</b></div><p>专人为你的业务单独打磨，交代一句，整件事就办好了。</p>
+<div class="tr">你的<b>特别助理</b></div><p>专人打磨，整件放手，一句办成。</p>
 <ul><li>远程客服 <span class="num">9:00–21:00</span>，<span class="num">3</span> 分钟内响应</li><li>专属工作流程，<span class="num">0–1</span> 天交付</li></ul>
 <div class="fine">每月 2,000 个工作项 · 可同时进行 5 个</div></div></div>"""
 favicon = mark(64, "px").replace('"', "'")
