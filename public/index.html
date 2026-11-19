@@ -40,12 +40,29 @@ th{background:#F7F5F0;font-weight:700;white-space:nowrap}
 th:first-child,td:first-child{width:26%;color:#5E6677}
 td.muted{color:#5E6677}
 .tbl{overflow-x:auto}
+.note{font-size:13px;color:#5E6677;line-height:1.7;margin:6px 0 !important}
+.note b{font-weight:700;color:#141B2D;margin-right:6px}
+.cases-h{margin-top:26px !important}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0 4px}
+.case{background:#F7F5F0;border-radius:16px;padding:20px 22px 16px;border-top:4px solid #14A37F;display:flex;flex-direction:column}
+.case.hi{border-top-color:#FF6A1F}
+.case h3{font-size:17px;line-height:1.45;margin:8px 0 2px !important}
+.case .who{font-size:13px;color:#5E6677;margin-bottom:6px}
+.case p{font-size:14.5px;line-height:1.85;margin:8px 0}
+.chips{display:flex;gap:6px}
+.chip{font-size:12px;line-height:20px;font-weight:700;border-radius:999px;padding:0 10px;display:inline-block;background:#fff;color:#5E6677;border:1px solid #E4E1D8}
+.chip.t{background:#14A37F;color:#fff;border-color:#14A37F}
+.case.hi .chip.t{background:#FF6A1F;border-color:#FF6A1F}
+.say{background:#fff;border:1px solid #E4E1D8;border-radius:8px;padding:1px 7px;font-weight:700;color:#141B2D;white-space:normal}
+.case .worth{margin-top:auto !important;background:#fff;border-radius:10px;padding:10px 14px;font-weight:700;font-size:14.5px}
+.case.hi .worth{background:#FFF1E6}
+.case .disc{font-size:12px;color:#5E6677;margin:6px 0 0}
 .todo{display:inline-block;font-size:12px;font-weight:700;color:#FF6A1F;background:#FFF1E6;border-radius:6px;padding:0 7px;margin:0 3px;line-height:1.8}
 footer{padding:20px 0 50px;color:#5E6677;font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
-@media (max-width:700px){.hero h1{font-size:32px}.tiers{grid-template-columns:1fr}.card{padding:20px 18px}th:first-child,td:first-child{width:auto}}
+@media (max-width:700px){.cases{grid-template-columns:1fr}.hero h1{font-size:32px}.tiers{grid-template-columns:1fr}.card{padding:20px 18px}th:first-child,td:first-child{width:auto}}
 @media print{body{background:#fff}.card,.tier{break-inside:avoid}}
 </style></head><body>
-<header><div class="wrap top"><div style="display:inline-flex;align-items:center;gap:2.0mm"><svg width="7.587mm" height="9mm" viewBox="0 0 1686 2000" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="sp3"><rect x="-200" y="0" width="2086" height="2200"/></clipPath></defs><g clip-path="url(#sp3)"><circle cx="360" cy="-40" r="320" fill="#E8550F"/><path d="M162 1330 V600 C162 420 230 290 330 200 C430 110 560 50 700 20 L960 920 V1870 H700 A538 538 0 0 1 162 1330 Z" fill="#FF7A33"/><ellipse cx="660" cy="470" rx="384" ry="476" fill="#FFFFFF"/><circle cx="678" cy="477" r="97" fill="#141B2D"/><path d="M960 920 L1575 1792 C1450 1880 1300 1920 1150 1918 C860 1912 640 1680 637 1390 C635 1180 760 1000 960 920 Z" fill="#E8550F"/><path d="M885 580 C910 620 960 640 1050 635 C1130 630 1190 650 1225 730 C1150 830 1060 890 960 920 C915 820 890 700 885 580 Z" fill="#5E6677"/><path d="M885 580 C850 400 880 250 960 170 C1030 100 1110 80 1180 110 C1300 160 1400 320 1440 540 C1462 700 1440 840 1378 920 C1375 840 1320 742 1225 730 C1190 650 1130 630 1050 635 C960 640 910 620 885 580 Z" fill="#141B2D"/></g></svg><div><span class="wm wm-ink" style="height:4.14mm;width:8.54mm" role="img" aria-label="司徒"></span></div></div><span class="meta">服务说明 · 草案 v0.23 · 2026-11-18</span></div></header>
+<header><div class="wrap top"><div style="display:inline-flex;align-items:center;gap:2.0mm"><svg width="7.587mm" height="9mm" viewBox="0 0 1686 2000" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="sp3"><rect x="-200" y="0" width="2086" height="2200"/></clipPath></defs><g clip-path="url(#sp3)"><circle cx="360" cy="-40" r="320" fill="#E8550F"/><path d="M162 1330 V600 C162 420 230 290 330 200 C430 110 560 50 700 20 L960 920 V1870 H700 A538 538 0 0 1 162 1330 Z" fill="#FF7A33"/><ellipse cx="660" cy="470" rx="384" ry="476" fill="#FFFFFF"/><circle cx="678" cy="477" r="97" fill="#141B2D"/><path d="M960 920 L1575 1792 C1450 1880 1300 1920 1150 1918 C860 1912 640 1680 637 1390 C635 1180 760 1000 960 920 Z" fill="#E8550F"/><path d="M885 580 C910 620 960 640 1050 635 C1130 630 1190 650 1225 730 C1150 830 1060 890 960 920 C915 820 890 700 885 580 Z" fill="#5E6677"/><path d="M885 580 C850 400 880 250 960 170 C1030 100 1110 80 1180 110 C1300 160 1400 320 1440 540 C1462 700 1440 840 1378 920 C1375 840 1320 742 1225 730 C1190 650 1130 630 1050 635 C960 640 910 620 885 580 Z" fill="#141B2D"/></g></svg><div><span class="wm wm-ink" style="height:4.14mm;width:8.54mm" role="img" aria-label="司徒"></span></div></div><span class="meta">服务说明 · 草案 v0.24 · 2026-11-18</span></div></header>
 <main class="wrap">
 <div class="hero"><h1>你的事，<em>司徒</em>来办</h1><p class="lead">公司再小，也有一个懂你业务的助理</p><p class="sub">单兵有助理，小队有帮手。两个版本，按你需要的助理来选。</p></div>
 <div class="tiers">
@@ -114,31 +131,31 @@ footer{padding:20px 0 50px;color:#5E6677;font-size:13px;display:flex;justify-con
 </tr>
 </tbody>
 </table></div>
-<h3>畅享版示例一：一句话，提案初稿当天到手</h3>
+<h3 class="cases-h">四个示例：看看司徒怎么帮人</h3><div class="cases"><article class="case "><div class="chips"><span class="chip t">畅享版</span><span class="chip">一个人</span></div><h3>一句话，提案初稿当天到手</h3><div class="who">林然 · 独立品牌顾问</div>
 <p>林然是一名独立品牌顾问，一个人同时服务六个客户。每接到新的提案邀请，她都要翻出做过的旧案子找参考，把客户发来的资料从头读一遍，再一页页搭出方案。一份初稿，往往要熬上两个晚上。</p>
-<p>这次，一家茶饮品牌约她下周二提案。她对司徒说一句：“出一版提案初稿，参考去年那个咖啡品牌的案子。”当天下午，初稿就到了手上：结构是她惯用的那一套，语气也像她亲手写的。司徒还提醒她一声：客户需求书里写的目标人群，和上次通话记录里说的不一样，要不要先确认？</p>
+<p>这次，一家茶饮品牌约她下周二提案。她对司徒说一句：<span class="say">“出一版提案初稿，参考去年那个咖啡品牌的案子。”</span>当天下午，初稿就到了手上：结构是她惯用的那一套，语气也像她亲手写的。司徒还提醒她一声：客户需求书里写的目标人群，和上次通话记录里说的不一样，要不要先确认？</p>
 <p>她把省下的时间，都花在了只有她能做的事情上：琢磨这个品牌的核心创意。傍晚开完客户会，她又交代一句：“把刚才的会整理成纪要，列好待办。”不一会儿，也办妥了。</p>
-<p>每月 999 元，相当于请了一位一点就通的高级助理：交代一件，办妥一件。</p>
-<p><small>示意场景，非真实用户案例。</small></p>
-<h3>畅享版示例二：尽调清单八十问，一周答完</h3>
+<p class="worth">每月 999 元，相当于请了一位一点就通的高级助理：交代一件，办妥一件。</p>
+<p class="disc">示意场景，非真实用户案例。</p>
+</article><article class="case "><div class="chips"><span class="chip t">畅享版</span><span class="chip">小团队</span></div><h3>尽调清单八十问，一周答完</h3><div class="who">周舟 · 7 人创业团队</div>
 <p>周舟带着六个人创业，做一款面向连锁门店的排班软件。融资谈到了关键一步，投资方发来尽调清单：八十多个问题，涉及客户合同、收入确认、产品路线、团队期权，要求一周内答复，每个数字都要附上依据。资料散在每个人的电脑里，合同在销售那，财务数据在兼职会计那，版本记录在研发那。以往碰上这种事，全员都得停下手头的活来配合。</p>
-<p>这次，大家把相关资料放进共享文件夹。周舟对司徒说一句：“按尽调清单，逐条起草回答，附上依据。”当天晚上，八十多个问题的初稿就整理好了：每条回答都标明出自哪份合同、哪张报表。司徒还提醒他三件事：两份客户合同的续约年限，和销售台账记的不一样；有一项收入，报表和回款记录对不上；另有九个问题资料里找不到依据，需要他亲自回答。</p>
+<p>这次，大家把相关资料放进共享文件夹。周舟对司徒说一句：<span class="say">“按尽调清单，逐条起草回答，附上依据。”</span>当天晚上，八十多个问题的初稿就整理好了：每条回答都标明出自哪份合同、哪张报表。司徒还提醒他三件事：两份客户合同的续约年限，和销售台账记的不一样；有一项收入，报表和回款记录对不上；另有九个问题资料里找不到依据，需要他亲自回答。</p>
 <p>周舟和合伙人把力气花在这九个问题和三处差异上，其他人照常干活。一周后，回复按时交了出去。投资方回了一句：“材料很清楚。”</p>
-<p>每月 999 元，团队多了一位一点就通的高级助理：交代一件，办妥一件。</p>
-<p><small>示意场景，非真实用户案例。</small></p>
-<h3>尊享版示例一：二十场访谈，第二天一早理出头绪</h3>
+<p class="worth">每月 999 元，团队多了一位一点就通的高级助理：交代一件，办妥一件。</p>
+<p class="disc">示意场景，非真实用户案例。</p>
+</article><article class="case hi"><div class="chips"><span class="chip t">尊享版</span><span class="chip">一个人</span></div><h3>二十场访谈，第二天一早理出头绪</h3><div class="who">苏晴 · 自由职业定性研究员</div>
 <p>苏晴是一名自由职业的定性研究员，一个人给品牌方做用户访谈。访谈本身她很享受，真正磨人的是访谈之后：二十场录音要逐字转写，再一句句贴标签、归主题、找出能放进报告的原话，最后写成洞察报告。每个项目，光整理就要熬上一周，真正思考“这意味着什么”的时间反而所剩无几。</p>
 <p>开通尊享版后，服务团队派专人花了一天，读了她过去几个项目的编码表、分析笔记和交付报告，摸清她怎么拆主题、用什么框架、什么样的原话她会选，把这一整套打磨成她自己的专属流程。</p>
-<p>现在，一个项目的访谈做完，她对司徒说一句：“这批访谈，按老规矩整理。”第二天一早，整理稿已经备好：逐字稿、编码表、主题归类，每个主题下的典型原话都标明出自第几场、第几分钟。司徒还提醒她：好几位受访者嘴上说“最看重价格”，可讲起真实经历时，提得最多的其实是“怕踩雷”。她顺着这条线深挖，写出了这个项目最关键的一条洞察。每个项目都照此办理，她终于把时间花在了真正的研究上。</p>
-<p>每月 1,999 元，换来的是一位懂你业务、连夜替你把活干完的特别助理。</p>
-<p><small>示意场景，非真实用户案例。</small></p>
-<h3>尊享版示例二：下班前说一句，第二天五篇笔记备好</h3>
+<p>现在，一个项目的访谈做完，她对司徒说一句：<span class="say">“这批访谈，按老规矩整理。”</span>第二天一早，整理稿已经备好：逐字稿、编码表、主题归类，每个主题下的典型原话都标明出自第几场、第几分钟。司徒还提醒她：好几位受访者嘴上说“最看重价格”，可讲起真实经历时，提得最多的其实是“怕踩雷”。她顺着这条线深挖，写出了这个项目最关键的一条洞察。每个项目都照此办理，她终于把时间花在了真正的研究上。</p>
+<p class="worth">每月 1,999 元，换来的是一位懂你业务、连夜替你把活干完的特别助理。</p>
+<p class="disc">示意场景，非真实用户案例。</p>
+</article><article class="case hi"><div class="chips"><span class="chip t">尊享版</span><span class="chip">小团队</span></div><h3>下班前说一句，第二天五篇笔记备好</h3><div class="who">小林 · 4 人小红书获客团队</div>
 <p>小林的团队只有四个人，帮几家旅游公司在小红书上找客人。图库里存着几千张照片，跑出过不少爆款笔记，可每天还是老样子：美工翻图、修图，文案对着旧稿改写，再有人把图和字拼好、排版、校一遍。一篇笔记要经三四个人的手，忙到深夜，第二天的还没着落。</p>
 <p>开通尊享版后，服务团队派专人花了一天，摸清他们怎么选图、爆款文案是什么腔调、每家客户有哪些忌讳，把这一整套打磨成他们自己的专属流程。</p>
-<p>现在，小林下班前对司徒说一句：“明天三亚的五篇，按老规矩。”第二天一早，五篇笔记已经备好：图片从团队自己的图库里挑，文案还是他们熟悉的味道，每家客户的要求都照顾到了。团队看一遍、顺手改一改，就能发布。</p>
-<p>每月 1,999 元，还不够请半个运营助理；换来的，却是一位懂你业务、连夜替你把活干完的特别助理。</p>
-<p><small>示意场景，非真实用户案例。专属流程不含视频制作。</small></p>
-</section><section class="card"><h2><span class="no">三</span>工作项规则</h2>
+<p>现在，小林下班前对司徒说一句：<span class="say">“明天三亚的五篇，按老规矩。”</span>第二天一早，五篇笔记已经备好：图片从团队自己的图库里挑，文案还是他们熟悉的味道，每家客户的要求都照顾到了。团队看一遍、顺手改一改，就能发布。</p>
+<p class="worth">每月 1,999 元，还不够请半个运营助理；换来的，却是一位懂你业务、连夜替你把活干完的特别助理。</p>
+<p class="disc">示意场景，非真实用户案例。专属流程不含视频制作。</p>
+</article></div></section><section class="card"><h2><span class="no">三</span>工作项规则</h2>
 <ol>
 <li>每开一个工作项，消耗 <span class="num">1 个</span>额度。建议一个工作项只做一件事，做完即关闭。</li>
 <li>选用高级模型时，每个工作项消耗 <span class="num">5 个</span>额度。</li>
@@ -182,16 +199,16 @@ footer{padding:20px 0 50px;color:#5E6677;font-size:13px;display:flex;justify-con
 </tr>
 </tbody>
 </table></div>
-<p>服务时间以外的留言，在次日 9:00 后按顺序回复。</p>
-<p>人工服务不包括：代替你与客户沟通、代替你做业务决策、代替你发送邮件或对外提交文件。</p>
+<p class="note"><b>备注</b>服务时间以外的留言，在次日 9:00 后按顺序回复。</p>
+<p class="note"><b>备注</b>人工服务不包括代替你与客户沟通、代替你做业务决策、代替你发送邮件或对外提交文件。</p>
 </section><section class="card"><h2><span class="no">五</span>信息安全</h2>
 <ol>
 <li><strong>只读你授权的内容</strong>：司徒只读取你授权的文件和文件夹（授权一个文件夹，即包含其下全部子文件夹）。未经授权的文件不读取。</li>
 <li><strong>本地优先</strong>：你的资料默认存在你的电脑上，并在本地建立索引。完成任务时，只有必要的内容片段会发送给模型处理。</li>
 <li><strong>每条结论标明出处</strong>：司徒给出的每条结论都标明出自哪份文件，你随时能核对。</li>
 <li><strong>对外动作由你完成</strong>：司徒可以帮你写好文档和邮件，但不会代替你发送。删除、提交等操作前，司徒会先征求你的同意。</li>
-<li>部分数据为支持多端使用会存于服务端。数据流向和使用的模型来源，以公开的《隐私说明》为准<span class="todo">待确认：律师审定</span>。</li>
 </ol>
+<p class="note"><b>备注</b>部分数据为支持多端使用会存于服务端。数据流向和使用的模型来源，以公开的《隐私说明》为准<span class="todo">待确认：律师审定</span>。</p>
 </section><section class="card"><h2><span class="no">六</span>付费方式</h2>
 <div class="tbl"><table>
 <thead>
