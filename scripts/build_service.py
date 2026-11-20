@@ -128,7 +128,7 @@ page = f"""<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta n
 <link rel="icon" href="{fav}"><style>{css}</style></head><body>
 <header><div class="wrap top">{logo(9)}<span class="meta">服务说明 · {html.escape(meta)}</span></div></header>
 <main class="wrap">
-<div class="hero"><h1>你的事，<em>司徒</em>来办</h1><p class="lead">{PROMISE}</p><p class="sub">{SUBLINE}。两个版本，按你需要的助理来选。</p></div>
+<div class="hero"><h1>你的事，<em>司徒</em>来办</h1><p class="lead">{PROMISE}</p><p class="sub">{SUBLINE}。</p></div>
 {tiers}
 {body}
 </main>
