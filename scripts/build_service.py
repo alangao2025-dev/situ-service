@@ -17,7 +17,8 @@ h = re.sub(r"【待确认([^】]*)】", lambda m: f'<span class="todo">待确认
 h = re.sub(r"(¥[\d,]+(?:/[月季年])?|\d+(?:[–-]\d+)? ?(?:分钟|天|个)|\d{1,2}:\d{2}–\d{1,2}:\d{2})", r'<span class="num">\1</span>', h)
 h = h.replace("<td>无</td>", '<td class="muted">无</td>')
 # 备注 -> small note
-h = re.sub(r"<p>备注：(.*?)</p>", r'<p class="note"><b>备注</b>\1</p>', h, flags=re.S)
+h = re.sub(r"<p>备注：</p>\s*<ol>(.*?)</ol>", r'<div class="note notes"><b>备注：</b><ol>\1</ol></div>', h, flags=re.S)
+h = re.sub(r"<p>备注：(.+?)</p>", r'<p class="note"><b>备注：</b>\1</p>', h, flags=re.S)
 # case cards
 WHO = {"林然": ("一个人", "独立品牌顾问"), "周舟": ("小团队", "7 人创业团队"), "苏晴": ("一个人", "自由职业定性研究员"), "小林": ("小团队", "4 人小红书获客团队")}
 def card(m):
@@ -98,7 +99,9 @@ th:first-child,td:first-child{{width:26%;color:{slate}}}
 td.muted{{color:{slate}}}
 .tbl{{overflow-x:auto}}
 .note{{font-size:13px;color:{slate};line-height:1.7;margin:6px 0 !important}}
-.note b{{font-weight:700;color:{ink};margin-right:6px}}
+.note b{{font-weight:700;color:{ink}}}
+.notes ol{{margin:2px 0 0 !important;padding-left:20px !important}}
+.notes li{{margin:1px 0}}
 .cases-h{{margin-top:26px !important}}
 .cases{{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0 4px}}
 .case{{background:{paper};border-radius:16px;padding:20px 22px 16px;border-top:4px solid {mint};display:flex;flex-direction:column}}
